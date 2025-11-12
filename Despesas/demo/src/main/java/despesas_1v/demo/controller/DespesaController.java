@@ -1,6 +1,6 @@
 package com.financeiro.expense.controller;
 
-import com.financeiro.expense.model.Despesa;
+import despesas_1v.demo.model.Despesa;
 import com.financeiro.expense.service.DespesaService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

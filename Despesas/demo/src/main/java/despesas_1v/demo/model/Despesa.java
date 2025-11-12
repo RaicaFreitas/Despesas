@@ -1,4 +1,4 @@
-package com.financeiro.expense.model;
+package despesas_1v.demo.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

@@ -1,6 +1,6 @@
 package com.financeiro.expense.repository;
 
-import com.financeiro.expense.model.Despesa;
+import despesas_1v.demo.model.Despesa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
