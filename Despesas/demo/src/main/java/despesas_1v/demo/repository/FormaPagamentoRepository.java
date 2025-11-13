@@ -1,6 +1,6 @@
-package com.financeiro.expense.repository;
+package despesas_1v.demo.repository;
 
-import com.financeiro.expense.model.FormaPagamento;
+import despesas_1v.demo.model.FormaPagamento;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

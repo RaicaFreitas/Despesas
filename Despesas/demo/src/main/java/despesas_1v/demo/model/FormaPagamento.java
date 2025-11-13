@@ -1,17 +1,11 @@
-package com.financeiro.expense.model;
+package despesas_1v.demo.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "forma_pagamento")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class FormaPagamento {
 
     @Id
@@ -29,4 +23,50 @@ public class FormaPagamento {
 
     @Column(nullable = false)
     private Boolean ativo = true;
+
+    // ========== CONSTRUTORES ==========
+
+    public FormaPagamento() {
+    }
+
+    public FormaPagamento(Integer idFormaPagamento, String nome, String descricao, Boolean ativo) {
+        this.idFormaPagamento = idFormaPagamento;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.ativo = ativo;
+    }
+
+    // ========== GETTERS E SETTERS ==========
+
+    public Integer getIdFormaPagamento() {
+        return idFormaPagamento;
+    }
+
+    public void setIdFormaPagamento(Integer idFormaPagamento) {
+        this.idFormaPagamento = idFormaPagamento;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
+    }
 }

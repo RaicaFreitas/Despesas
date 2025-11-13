@@ -1,4 +1,4 @@
-package com.financeiro.expense.exception;
+package despesas_1v.demo.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

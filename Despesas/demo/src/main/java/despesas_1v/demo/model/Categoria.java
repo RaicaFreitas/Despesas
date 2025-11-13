@@ -1,17 +1,11 @@
-package com.financeiro.expense.model;
+package despesas_1v.demo.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "categoria")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Categoria {
 
     @Id
@@ -37,4 +31,68 @@ public class Categoria {
 
     @Column(nullable = false)
     private Boolean ativo = true;
+
+    // ========== CONSTRUTORES ==========
+
+    public Categoria() {
+    }
+
+    public Categoria(Integer idCategoria, String nome, String descricao, String icone, String cor, Boolean ativo) {
+        this.idCategoria = idCategoria;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.icone = icone;
+        this.cor = cor;
+        this.ativo = ativo;
+    }
+
+    // ========== GETTERS E SETTERS ==========
+
+    public Integer getIdCategoria() {
+        return idCategoria;
+    }
+
+    public void setIdCategoria(Integer idCategoria) {
+        this.idCategoria = idCategoria;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getIcone() {
+        return icone;
+    }
+
+    public void setIcone(String icone) {
+        this.icone = icone;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
+    }
 }

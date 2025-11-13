@@ -1,8 +1,8 @@
-package com.financeiro.expense.service;
+package despesas_1v.demo.service;
 
-import com.financeiro.expense.exception.ResourceNotFoundException;
-import com.financeiro.expense.model.Categoria;
-import com.financeiro.expense.repository.CategoriaRepository;
+import despesas_1v.demo.exception.ResourceNotFoundException;
+import despesas_1v.demo.model.Categoria;
+import despesas_1v.demo.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

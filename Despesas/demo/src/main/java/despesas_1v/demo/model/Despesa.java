@@ -2,9 +2,6 @@ package despesas_1v.demo.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -14,9 +11,6 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "despesa")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Despesa {
 
     @Id
@@ -58,4 +52,97 @@ public class Despesa {
     @UpdateTimestamp
     @Column(name = "data_atualizacao")
     private LocalDateTime dataAtualizacao;
+
+    // ========== CONSTRUTORES ==========
+
+    public Despesa() {
+    }
+
+    public Despesa(Integer idDespesa, String descricao, BigDecimal valor, LocalDate dataDespesa,
+                   String observacao, Categoria categoria, FormaPagamento formaPagamento,
+                   LocalDateTime dataCadastro, LocalDateTime dataAtualizacao) {
+        this.idDespesa = idDespesa;
+        this.descricao = descricao;
+        this.valor = valor;
+        this.dataDespesa = dataDespesa;
+        this.observacao = observacao;
+        this.categoria = categoria;
+        this.formaPagamento = formaPagamento;
+        this.dataCadastro = dataCadastro;
+        this.dataAtualizacao = dataAtualizacao;
+    }
+
+    // ========== GETTERS E SETTERS ==========
+
+    public Integer getIdDespesa() {
+        return idDespesa;
+    }
+
+    public void setIdDespesa(Integer idDespesa) {
+        this.idDespesa = idDespesa;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public BigDecimal getValor() {
+        return valor;
+    }
+
+    public void setValor(BigDecimal valor) {
+        this.valor = valor;
+    }
+
+    public LocalDate getDataDespesa() {
+        return dataDespesa;
+    }
+
+    public void setDataDespesa(LocalDate dataDespesa) {
+        this.dataDespesa = dataDespesa;
+    }
+
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public FormaPagamento getFormaPagamento() {
+        return formaPagamento;
+    }
+
+    public void setFormaPagamento(FormaPagamento formaPagamento) {
+        this.formaPagamento = formaPagamento;
+    }
+
+    public LocalDateTime getDataCadastro() {
+        return dataCadastro;
+    }
+
+    public void setDataCadastro(LocalDateTime dataCadastro) {
+        this.dataCadastro = dataCadastro;
+    }
+
+    public LocalDateTime getDataAtualizacao() {
+        return dataAtualizacao;
+    }
+
+    public void setDataAtualizacao(LocalDateTime dataAtualizacao) {
+        this.dataAtualizacao = dataAtualizacao;
+    }
 }

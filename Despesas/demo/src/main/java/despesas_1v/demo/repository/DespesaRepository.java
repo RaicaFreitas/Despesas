@@ -1,4 +1,4 @@
-package com.financeiro.expense.repository;
+package despesas_1v.demo.repository;
 
 import despesas_1v.demo.model.Despesa;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,7 +1,7 @@
-package com.financeiro.expense.controller;
+package despesas_1v.demo.controller;
 
 import despesas_1v.demo.model.Despesa;
-import com.financeiro.expense.service.DespesaService;
+import despesas_1v.demo.service.DespesaService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
